@@ -69,6 +69,18 @@
                                                     </div>
                                                    {{ form.pd_number }}
                                                 </div>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">商品重量</label>
+                                                    </div>
+                                                   {{ form.pd_weight }}
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="inputGroupSelect01">商品％</label>
+                                                    </div>
+                                                   {{ form.pd_profit }}
+                                                </div>
 
         
                                                 <h4 class="card-title">託運註明</h4>
@@ -141,6 +153,12 @@
                                                 <th class="border-0 font-14">
                                                     商品編號
                                                 </th>
+                                                <th class="border-0 font-14">
+                                                    重量
+                                                </th>
+                                                <th class="border-0 font-14">
+                                                    利潤%
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -166,6 +184,12 @@
                                                 </td>
                                                 <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
                                                      {{ todo.pd_number }}
+                                                </td>
+                                                <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
+                                                     {{ todo.pd_weight}}
+                                                </td>
+                                                <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
+                                                     {{ todo.pd_profit }}
                                                 </td>
                                                 <td class="font-weight-medium text-dark text-centerborder-top-0  py-4"><a href="{% url 'todo:update' todo.id %}" class="btn btn-success">修改</a>
                                                 <a href="{% url 'todo:delete' todo.id %}" class="btn btn-danger" >刪除</a>

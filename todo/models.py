@@ -5,17 +5,19 @@ from ckeditor.fields import RichTextField
 
 class Flight(models.Model):
     items_choices = (
-        ('tops', '衣服'),('pants','褲子'),('shoes','鞋子'),('accessories','配件'),('maintenance','保養品'),('makeup','化妝品'),
+        ('tops', '衣服'),('pants','褲子'),('shoes','鞋子'),('accessories','配件'),('maintenance','保養品'),('makeup','化妝品'),('supplemen','保健食品')
     )
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     items = models.CharField(max_length=20, choices=items_choices)
-    fromname = models.CharField(max_length=10)
-    arrivalname = models.CharField(max_length=50)
+    fromname = models.CharField(max_length=10,null=True,)
+    arrivalname = models.CharField(max_length=50,null=True,)
     pd_number = models.CharField(max_length=10, null=True)
     description = models.CharField(max_length=100)
-    finish = models.BooleanField(default=False)
+    finish = models.BooleanField(default=False,null=True,)
     pub_date = models.DateTimeField(null=True,auto_now=True)
     pd_content = RichTextField(blank=True, null=True)
+    pd_weight = models.TextField(max_length=100,null=True,verbose_name = '重量')
+    pd_profit = models.TextField(max_length=100,null=True,verbose_name = '數值')
 
 
 class Todo(models.Model):

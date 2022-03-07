@@ -66,12 +66,6 @@
                                     <table id="zero_config" class="table table-striped table-bordered no-wrap">
                                         <thead>
                                             <tr class="border-0">
-                                                <th class="border-0 font-14">
-                                                    國家
-                                                </th>
-                                                <th class="border-0 font-14">
-                                                    種類
-                                                </th>
                                                  <th class="border-0 font-14">
                                                     商品名稱
                                                 </th>
@@ -84,15 +78,6 @@
                                         <tbody>
                                             {% for todo in filter.qs %}  
                                             <tr>
-                                                
-                                                <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
-                                                 
-                                                    {{ todo.fromname }}
-                                                 
-                                                </td>
-                                                <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
-                                                     {{ todo.items }}
-                                                </td>
                                                  <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
                                                      {{ todo.arrivalname }}
                                                 </td>
