@@ -16,10 +16,12 @@
                             <li class="list-group-item">註明：{{ form.description }}</li>
                             <li class="list-group-item">商品編號：{{ form.pd_number }}</li>
                             <li class="list-group-item col-12">商品內容：{{ form.pd_content }}</li>
+                            <li class="list-group-item col-12">商品重量：{{{ todo.pd_weight}}</li>
+                            <li class="list-group-item col-12">：{{ todo.pd_profit }}</li>
                             <li class="list-group-item">日期：{{ form.pub_date }}</li>
                         </ul>
                         <br>
-                        
+                       
                         <input type="submit" class="btn btn-primary" value="儲存" />
                     </form>
                 </div>
