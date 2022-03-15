@@ -1,26 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid" style="padding:9px;">
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body" style="padding:0px;">
             <ul class="list-group list-group-flush" style="color:#000">
                 <li class="list-group-item">國家：{{ object.fromname }}</li>
                 <li class="list-group-item">種類：{{ object.items }}</li>
                 <li class="list-group-item">商品名稱：{{ object.arrivalname }}</li>
                 <li class="list-group-item">註明：{{ object.description }}</li>
                 <li class="list-group-item">商品內容：<br>{{ object.pd_content|safe }}</li>
-                
             </ul>
                 </div>
             </div>
         </div>    
     </div>
 </div>    
-
-
-
 
 {% endblock  %}

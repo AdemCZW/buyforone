@@ -10,7 +10,7 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
+            <div class="container-fluid" style="padding:9px;">
                 <!-- *************************************************************** -->
                 <!-- Start First Cards -->
                 <!-- *************************************************************** -->
@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" style="padding: 0px;">
                                 <h4 class="card-title"></h4>
                                 <div class="col-sm-12 col-md-6 col-lg-4">
                                     <div class="form-group">
@@ -69,23 +69,14 @@
                                                  <th class="border-0 font-14">
                                                     商品名稱
                                                 </th>
-
-                                                <th class="border-0 font-14">
-                                                    註明
-                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {% for todo in filter.qs %}  
                                             <tr>
-                                                 <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
-                                                     {{ todo.arrivalname }}
-                                                </td>
-                                                <td class="font-weight-medium text-dark text-centerborder-top-0 py-4">
-                                                     {{ todo.description }}
-                                                </td>
-                                                <td class="font-weight-medium text-dark text-centerborder-top-0  py-4">
-                                                <a href="{% url 'todo:detail' todo.id %}" class="btn btn-info">詳細</a>
+                                                
+                                                <td class="text-dark text-centerborder-top-0 py-2">
+                                                <a href="{% url 'todo:detail' todo.id %}" class="">{{ todo.arrivalname }}</a>
                                                 </td>
                                             </tr>
                                             {% endfor %}
