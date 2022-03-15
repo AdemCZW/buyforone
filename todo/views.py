@@ -60,9 +60,7 @@ class FlightListView(ListView):
     model = Flight
     queryset = Flight.objects.filter(finish=False)  # 指定查詢條件
     template_name = 'flight/flight_main.html'  # 樣板路徑
-
-
-    @method_decorator(login_required)
+    
     def dispatch(self, request, *args, **kwargs):
         return super(FlightListView, self).dispatch(request, *args, **kwargs)
 

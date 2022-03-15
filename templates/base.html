@@ -36,8 +36,9 @@
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
+        {% if request.user.is_authenticated %}
         <header class="topbar" data-navbarbg="skin6">
-            <nav class="navbar top-navbar navbar-expand-md">
+            <nav class="navbar top-navbar navbar-expand-md" >
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- This is for the sidebar toggle which is visible on mobile only -->
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
@@ -116,7 +117,7 @@
                                 <span class="ml-2 d-none d-lg-inline-block"><span>Hello,</span> <span
                                         class="text-dark">{{request.user}}</span> <i data-feather="chevron-down"
                                         class="svg-icon"></i></span>
-                                        {% endif %}
+                                    {% endif %}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
                                 
@@ -140,6 +141,7 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
+
         <aside class="left-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar" data-sidebarbg="skin6">
@@ -159,9 +161,13 @@
                         </li>
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu"></span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="{% url 'Logout' %}"
+                        <li class="sidebar-item">
+                            
+                         <a class="sidebar-link" href="{% url 'Logout' %}"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                     class="hide-menu">Logout</span></a></li>
+                            {% endif %}
+
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
