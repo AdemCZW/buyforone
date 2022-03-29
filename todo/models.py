@@ -5,7 +5,7 @@ from ckeditor.fields import RichTextField
 
 class Flight(models.Model):
     items_choices = (
-        ('tops', '衣服'),('pants','褲子'),('shoes','鞋子'),('accessories','配件'),('maintenance','保養品'),('makeup','化妝品'),('supplemen','保健食品')
+        ('衣服', '衣服'),('褲子','褲子'),('鞋子','鞋子'),('配件','配件'),('保養品','保養品'),('化妝品','化妝品'),('保健食品','保健食品')
     )
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
     items = models.CharField(max_length=20, choices=items_choices)
@@ -18,6 +18,9 @@ class Flight(models.Model):
     pd_content = RichTextField(blank=True, null=True)
     pd_weight = models.TextField(max_length=100,null=True,verbose_name = '重量')
     pd_profit = models.TextField(max_length=100,null=True,verbose_name = '數值')
+
+    class Meta:
+        ordering = ['arrivalname']
 
 
 class Todo(models.Model):
