@@ -1,61 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
-   
-            <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
+    
             <div class="container-fluid" style="padding:9px;">
-                <!-- *************************************************************** -->
-                <!-- Start First Cards -->
-                <!-- *************************************************************** -->
-                
-                <!-- *************************************************************** -->
-                <!-- End First Cards -->
-                <!-- *************************************************************** -->
-                <!-- *************************************************************** -->
-                <!-- Start Sales Charts Section -->
-                <!-- *************************************************************** -->
-                
-                <!-- *************************************************************** -->
-                <!-- End Sales Charts Section -->
-                <!-- *************************************************************** -->
-                <!-- *************************************************************** -->
-                <!-- Start Location and Earnings Charts Section -->
-                <!-- *************************************************************** -->
-                
-                <!-- *************************************************************** -->
-                <!-- End Location and Earnings Charts Section -->
-                <!-- *************************************************************** -->
-                <!-- *************************************************************** -->
-                <!-- Start Top Leader Table -->
-                <!-- *************************************************************** -->
-                
-
                 <div class="row">
                     <div class="col-12">
                         <div class="card-body" style="padding: 0px;">
                             <div class="col-sm-12 col-md-12 col-lg-6">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
-                                        <p>
-                                        購買須知：<br>
-                                        1.此為代購網站，後續報關動作，快速教學請見：<a href="https://web.customs.gov.tw/singlehtml/3150?cntId=cus1_3150_3150_1471">連結</a><br>
-                                        2.除非商品損毀，請第一時間聯絡，商品一律售出不退換貨<br>
-                                        3.商品價格已包含運輸費用<br>
-                                        4.訂單成立時間：將從匯款後，需半個工作天<br>
-                                        5.如需代購特殊商品，請直接洽Line詢問：<a href="https://line.me/ti/p/QNAwINpH6f ">連結</a>
-                                    </p>
-
-
-
-
-                                    </div>
+                                            <p>
+                                            購買須知：<br>
+                                            1.此為代購網站，後續報關動作，快速教學請見：<a href="https://web.customs.gov.tw/singlehtml/3150?cntId=cus1_3150_3150_1471">連結</a><br>
+                                            2.除非商品損毀，請第一時間聯絡，商品一律售出不退換貨<br>
+                                            3.商品價格已包含運輸費用<br>
+                                            4.訂單成立時間：將從匯款後，需半個工作天<br>
+                                            5.如需代購特殊商品，請直接洽Line詢問：<a href="https://line.me/ti/p/QNAwINpH6f ">連結</a>
+                                            </p>
+                                        </div>
                                     </div>
                             </div>        
                     </div>
@@ -71,39 +32,29 @@
                                                     </div>
                                                 <form action="" method="get">
                                                      {% csrf_token %}
-
                                                     {{ filter.form.items }}
-
                                                 <button type="submit" class="btn btn-block btn-xs btn-success" value="search">search</button>
                                                 </form>
-
                                         </div>
-                                        
                                     </div>
-                        
                                 </div>
-                                
-                                <div class="table-responsive">
-                                    <table id="zero_config" class="table table-striped table-bordered no-wrap">
-                                        <thead>
-                                            <tr class="border-0">
-                                                 <th class="border-0 font-14">
-                                                    商品名稱
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for todo in filter.qs %}  
-                                            <tr>
-                                                
+                                <div class="row">
+                                    <div class="col-12">
+                                    <div class="form-group row">
+                                        {% for todo in filter.qs %}  
+                                            <tr class="row col-12 col-lg-12">
                                                 <td class="text-dark text-centerborder-top-0 py-2">
-                                                <a href="{% url 'todo:detail' todo.id %}" class="">{{ todo.arrivalname }}</a>
+                                                    <div class="col-lg-4 col-md-4 col-sm-6 ">
+                                                        <a href="{% url 'todo:detail' todo.id %}" class="">
+                                                            <p style="margin-top: 2%">{{ todo.arrivalname }}</p>
+                                                            <img style="width:80%;" src="{{ todo.pd_photo }}">
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
-                                            {% endfor %}
-                                        </tbody>
-                                        
-                                    </table>
+                                        {% endfor %}
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -112,19 +63,5 @@
                 <!-- *************************************************************** -->
                 <!-- End Top Leader Table -->
                 <!-- *************************************************************** -->
-                
-                    
-                
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
-       
 {% endblock  %}

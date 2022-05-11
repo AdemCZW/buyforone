@@ -22,12 +22,13 @@ class FlightModelForm(forms.ModelForm):
     
     class Meta:
         model = Flight
-        fields = ( 'items', 'fromname', 'arrivalname', 'description', 'pd_number','pd_content','pd_weight','pd_profit')
+        fields = ( 'items', 'fromname', 'arrivalname', 'description', 'pd_number','pd_content','pd_weight','pd_profit', 'pd_photo')
         widgets = {
             'items': forms.Select(choices=(('', '請選擇'),) + Flight.items_choices, attrs={'class': 'form-control'}),
             'fromname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
             'arrivalname': forms.TextInput(attrs={'class': 'form-control','rows':'4'}),
             'description': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
+            'pd_photo': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_number': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pub_date': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),
             'pd_weight': forms.TextInput(attrs={'class': 'form-control', 'rows': '4'}),

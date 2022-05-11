@@ -18,6 +18,7 @@ class Flight(models.Model):
     pd_content = RichTextField(blank=True, null=True)
     pd_weight = models.TextField(max_length=100,null=True,verbose_name = '重量')
     pd_profit = models.TextField(max_length=100,null=True,verbose_name = '數值')
+    pd_photo = models.TextField(max_length=100,null=True,verbose_name = '商品照片')
 
     class Meta:
         ordering = ['arrivalname']
