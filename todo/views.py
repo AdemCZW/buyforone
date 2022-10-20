@@ -54,21 +54,20 @@ class TodoDetailView(DetailView):
     template_name = 'todo/todo_detail.html'
 
 
-
-
 class FlightListView(ListView):
     model = Flight
     queryset = Flight.objects.filter(finish=False)  # 指定查詢條件
     template_name = 'flight/flight_main.html'  # 樣板路徑
-    
+
     def dispatch(self, request, *args, **kwargs):
         return super(FlightListView, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["filter"] = FlightFilter(self.request.GET, queryset=self.get_queryset())  # 資料模型表單
+        context["filter"] = FlightFilter(
+            self.request.GET, queryset=self.get_queryset())  # 資料模型表單
         return context
-   
+
 
 class FlightMyListView(LoginRequiredMixin, ListView):
     model = Flight
@@ -81,7 +80,8 @@ class FlightMyListView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["form"] = FlightModelForm()  # 資料模型表單
-        return context    
+        return context
+
 
 class FlightCreateView(CreateView):
     model = Flight
@@ -92,6 +92,7 @@ class FlightCreateView(CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(FlightCreateView, self).form_valid(form)
+
 
 class FlightUpdateView(UpdateView):
     model = Flight
@@ -106,32 +107,33 @@ class FlightDeleteView(DeleteView):
     success_url = '/flight/mylist'  # 刪除成功後要導向的網址
 
 
-
 class FlightDetailView(DetailView):
     model = Flight
-    template_name = 'flight/flight_detail.html'    
-
-
+    template_name = 'flight/flight_detail.html'
 
 
 # 首頁
 @login_required(login_url="Login")
 def index(request):
     return render(request, 'index.html')
-#註冊
+# 註冊
+
+
 def sign_up(request):
     form = RegisterForm()
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/login')  #重新導向到登入畫面
+            return redirect('/login')  # 重新導向到登入畫面
     context = {
         'form': form
     }
     return render(request, 'register.html', context)
 
-#登入
+# 登入
+
+
 def sign_in(request):
     form = LoginForm()
     if request.method == "POST":
@@ -140,7 +142,7 @@ def sign_in(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/flight')  #重新導向到首頁
+            return redirect('/flight')  # 重新導向到首頁
     context = {
         'form': form
 
@@ -148,18 +150,8 @@ def sign_in(request):
     return render(request, 'login.html', context)
 
 # 登出
+
+
 def log_out(request):
     logout(request)
-    return redirect('/login') #重新導向到登入畫面
-
-
-
-
-
-
-
-
-
-
-
-
+    return redirect('/login')  # 重新導向到登入畫面

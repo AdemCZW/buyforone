@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (
     TodoListView,
-    
+
     TodoUpdateView,
     TodoDeleteView,
     TodoDetailView,
@@ -23,6 +23,6 @@ urlpatterns = [
     path('update/<int:pk>', FlightUpdateView.as_view(), name='update'),
     path('delete/<int:pk>', FlightDeleteView.as_view(), name='delete'),
     path('detail/<int:pk>', FlightDetailView.as_view(), name='detail'),
-   
+
 
 ]
