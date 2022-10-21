@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 
-    'django-server-production-72a8.up.railway.app','127.0.0.1'
+    'buyforone.up.railway.app','127.0.0.1'
 
 ]
 
