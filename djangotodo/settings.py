@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 
-    'buyforone.herokuapp.com','127.0.0.1'
+    'django-server-production-72a8.up.railway.app','127.0.0.1'
 
 ]
 
