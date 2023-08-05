@@ -85,13 +85,8 @@ WSGI_APPLICATION = 'djangotodo.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'railway',
-        'PASSWORD': '76ElmwVpEApUxDtZFtNL',
-        'HOST': 'containers-us-west-53.railway.app',
-        'PORT': '7620',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

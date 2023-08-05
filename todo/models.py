@@ -52,3 +52,9 @@ class Customer(models.Model):
     email = models.EmailField(blank=False, null=False)
     tel = models.IntegerField()
     password = models.CharField(max_length=20, blank=False, null=True)
+
+
+class first_page(models.Model):
+    pic_loop_001 = models.CharField(max_length=30, blank=False, null=False)
+    pic_loop_002 = models.CharField(max_length=30, blank=False, null=False)
+    pic_loop_003 = models.CharField(max_length=30, blank=False, null=False)

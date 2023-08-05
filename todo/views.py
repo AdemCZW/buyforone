@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.contrib import auth
-from .models import Todo, Member, Flight
+from .models import Todo, Member, Flight, first_page
 from .forms import TodoModelForm, FlightModelForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .filters import FlightFilter

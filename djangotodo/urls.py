@@ -19,7 +19,7 @@ from todo.views import index, sign_up, sign_in, log_out
 from django.contrib.auth import views
 
 
-from django.contrib import admin  
+from django.contrib import admin
 from todo import views
 
 
@@ -33,4 +33,3 @@ urlpatterns = [
     path('flight/', include('todo.urls')),
 
 ]
-
