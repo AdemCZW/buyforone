@@ -55,6 +55,8 @@ class Customer(models.Model):
 
 
 class first_page(models.Model):
-    pic_loop_001 = models.CharField(max_length=30, blank=False, null=False)
-    pic_loop_002 = models.CharField(max_length=30, blank=False, null=False)
-    pic_loop_003 = models.CharField(max_length=30, blank=False, null=False)
+    pic_loop_001 = models.CharField(max_length=999, blank=False, null=False)
+    pic_loop_002 = models.CharField(max_length=999, blank=False, null=False)
+    pic_loop_003 = models.CharField(max_length=999, blank=False, null=False)
+    text_block_001 = RichTextField(
+        max_length=10000, default='輸入', blank=True, null=True, verbose_name='內容')

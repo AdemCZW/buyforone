@@ -36,6 +36,11 @@ class Todo(CreateView):
     success_url = '/todo'  # 儲存成功後要導向的網址
 
 
+class first_page_view(ListView):
+    model = first_page
+    template_name = 'flight/fg.html'  # 儲存成功後要導向的網址
+
+
 class TodoUpdateView(UpdateView):
     model = Todo
     form_class = TodoModelForm  # 使用的表單類別

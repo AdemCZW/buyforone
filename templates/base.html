@@ -1,29 +1,33 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     {% load static %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="澳洲代購網站，全站免運，商品價格已包含運費，讓你購買純正澳洲商品">
+    <meta name="description" content="">
     <meta name="keyword" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/favicon.png' %}">
-    <title>澳洲代購網Bags</title>
+    <title>益生菌</title>
     <!-- Custom CSS -->
     <link href="{% static 'assets/extra-libs/c3/c3.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets/libs/chartist/dist/chartist.min.css' %}" rel="stylesheet">
     <link href="{% static 'assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Custom CSS in templates/static-->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-    
-  </head>
-  <body>
-     <div class="preloader">
+
+</head>
+
+<body>
+    <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
@@ -32,14 +36,13 @@
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        {% if request.user.is_authenticated %}
+        <!-- ========={% if request.user.is_authenticated %}======= -->
         <header class="topbar" data-navbarbg="skin6">
-            <nav class="navbar top-navbar navbar-expand-md" >
+            <nav class="navbar top-navbar navbar-expand-md">
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- This is for the sidebar toggle which is visible on mobile only -->
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
@@ -50,7 +53,7 @@
                     <div class="navbar-brand">
                         <!-- Logo icon -->
                         <a href="index.html">
-                            
+
                             <!--End Logo icon -->
                             <!-- Logo text -->
                             <span class="logo-text">
@@ -67,9 +70,7 @@
                     <!-- ============================================================== -->
                     <!-- Toggle which is visible on mobile only -->
                     <!-- ============================================================== -->
-                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
-                        data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
                             class="ti-more"></i></a>
                 </div>
                 <!-- ============================================================== -->
@@ -81,17 +82,16 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
                         <!-- Notification -->
-                        
+
                         <!-- End Notification -->
                         <!-- ============================================================== -->
                         <!-- create new -->
                         <!-- ============================================================== -->
-                        
+
                         <li class="nav-item d-none d-md-block">
                             <a class="nav-link" href="javascript:void(0)">
                                 <div class="customize-input">
-                                    <select
-                                        class="custom-select form-control bg-white custom-radius custom-shadow border-0">
+                                    <select class="custom-select form-control bg-white custom-radius custom-shadow border-0">
                                         <option selected>EN</option>
                                         
                                     </select>
@@ -106,27 +106,24 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        
+
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                
-                                    {% if request.user.is_authenticated %}
-                                <span class="ml-2 d-none d-lg-inline-block"><span>Hello,</span> <span
-                                        class="text-dark">{{request.user}}</span> <i data-feather="chevron-down"
-                                        class="svg-icon"></i></span>
-                                    {% endif %}
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <!-- ======{% if request.user.is_authenticated %}=========== -->
+                                <span class="ml-2 d-none d-lg-inline-block"><span>Hello,</span> <span class="text-dark">{{request.user}}</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
+                                <!-- ======{% endif %}=========== -->
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
-                                
-                               
+
+
                                 <a class="dropdown-item" href="{% url 'Logout' %}"><i data-feather="power"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Logout</a>
-                                
+
                             </div>
                         </li>
                         <!-- ============================================================== -->
@@ -149,25 +146,23 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link" href="/flight"
-                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                        <li class="sidebar-item"> <a class="sidebar-link" href="/flight" aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">主頁</span></a>
                         </li>
                         <li class="list-divider"></li>
-                        
 
-                        <li class="sidebar-item"> <a class="sidebar-link " href="/flight/mylist"
-                                aria-expanded="false"><i data-feather="tag" class="feather-icon"></i><span
+
+                        <li class="sidebar-item"> <a class="sidebar-link " href="/flight/mylist" aria-expanded="false"><i data-feather="tag" class="feather-icon"></i><span
                                     class="hide-menu">我的貼文</span></a>
                         </li>
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu"></span></li>
                         <li class="sidebar-item">
-                            
-                         <a class="sidebar-link" href="{% url 'Logout' %}"
-                                aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
+
+                            <a class="sidebar-link" href="{% url 'Logout' %}" aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                     class="hide-menu">Logout</span></a></li>
-                            {% endif %}
+                        <!-- ================ {% endif %}============= -->
+
 
                     </ul>
                 </nav>
@@ -186,49 +181,48 @@
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
 
-    
-        {% block content %}
-        {% endblock  %}
-    
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            {% block content %} {% endblock %}
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
-     <script src="{% static 'assets/libs/popper.js/dist/umd/popper.min.js' %}"></script>
-    <script src="{% static 'assets/libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-    <!-- apps -->
-    <!-- apps -->
-    <script src="{% static 'dist/js/app-style-switcher.js' %}"></script>
-    <script src="{% static 'dist/js/feather.min.js' %}"></script>
-    <script src="{% static 'assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js' %}"></script>
-    <script src="{% static 'dist/js/sidebarmenu.js' %}"></script>
-    <!--Custom JavaScript -->
-    <script src="{% static 'dist/js/custom.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
-    <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
-    <!--This page JavaScript -->
-    <script src="{% static 'assets/extra-libs/c3/d3.min.js' %}"></script>
-    <script src="{% static 'assets/extra-libs/c3/c3.min.js' %}"></script>
-    <script src="{% static 'assets/libs/chartist/dist/chartist.min.js' %}"></script>
-    <script src="{% static 'assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js' %}"></script>
-    <script src="{% static 'assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js' %}"></script>
-    <script src="{% static 'assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js' %}"></script>
-    <script src="{% static 'dist/js/pages/dashboards/dashboard1.min.js' %}"></script>
-    <!-- XDSoft DateTimePicker -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
 
-    <script>
-        $(function () {
-          $("#id_pub_date").datetimepicker( {
-             format:'Y-m-d H:i',
-          });
-        });
-    </script>
-    <script>
-     
-    </script>
-  </body>
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
+            <script src="{% static 'assets/libs/popper.js/dist/umd/popper.min.js' %}"></script>
+            <script src="{% static 'assets/libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+            <!-- apps -->
+            <!-- apps -->
+            <script src="{% static 'dist/js/app-style-switcher.js' %}"></script>
+            <script src="{% static 'dist/js/feather.min.js' %}"></script>
+            <script src="{% static 'assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js' %}"></script>
+            <script src="{% static 'dist/js/sidebarmenu.js' %}"></script>
+            <!--Custom JavaScript -->
+            <script src="{% static 'dist/js/custom.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+            <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+            <!--This page JavaScript -->
+            <script src="{% static 'assets/extra-libs/c3/d3.min.js' %}"></script>
+            <script src="{% static 'assets/extra-libs/c3/c3.min.js' %}"></script>
+            <script src="{% static 'assets/libs/chartist/dist/chartist.min.js' %}"></script>
+            <script src="{% static 'assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js' %}"></script>
+            <script src="{% static 'assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js' %}"></script>
+            <script src="{% static 'assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js' %}"></script>
+            <script src="{% static 'dist/js/pages/dashboards/dashboard1.min.js' %}"></script>
+            <!-- XDSoft DateTimePicker -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
+
+            <script>
+                $(function() {
+                    $("#id_pub_date").datetimepicker({
+                        format: 'Y-m-d H:i',
+                    });
+                });
+            </script>
+            <script>
+            </script>
+</body>
+
 </html>

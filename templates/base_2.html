@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="橘攝婚紗攝影在創立時，就以區隔化市場策略進入寫真市場經營，不同於其他同業大同小異之商品風格，獨家以廣告風格MV拍攝手法，迎領流行時尚趨勢的風格。">
+    <meta name="keywords" content="酵素 台灣製造 天然水果 獨家技術 保護消化道 鳳梨酵素 膠原蛋白 水果酵素 天然酵素 益生菌   養顏美容 促進消化 提升抵抗力 瘦身 提高代謝 消暑 飲品 健康 老少咸宜 減糖">
+    <meta name="author" content="">
+    <meta property="og:image" content="{% static 'assets/img/500.png' %}" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon.png' %}">
+    <title>酵素</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="icon" href="{% static 'assets/img/favicon.png' %}" type="image/ico" />
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+
+</head>
+
+<body>
+    <!-- Modal 
+    <div class="modal " id="myModal" role="dialog">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="">
+                    <div class="fadeUp">
+                        <div class="line_btn-video video-container">
+                            <iframe src="https://www.youtube.com/embed/cHu-9tMBqCU?autoplay=1&amp;mute=1" frameborder="0" allowfullscreen="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="text-align: center;background-color: #9fa1a400;" onclick="cancel()" onkeypress="cancel()">
+                    <a type="button" id="close_001" class="btn btn-default" data-dismiss="modal">關閉</a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <h1>
+                    <a href="/flight/fg"></a>
+                </h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+            <nav id="navbar" class="navbar" style="font-family: 'Poppins', sans-serif !important;">
+                <ul>
+                    <li><a href="/flight/fg">首頁</a></li>
+                    <!-- <li><a href="/flight/studio-yt">攝影棚</a></li>
+                    <li class="dropdown"><a href="#"><span>婚紗攝影</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="/flight/wed-01">古裝婚紗</a></li>
+                            <li><a href="/flight/wed-02">景點婚紗</a></li>
+                            <li><a href="/flight/wed-03">摩登婚紗</a></li>
+                            <li><a href="/flight/wed-04">韓系婚紗</a></li>
+                            <li><a href="/flight/castle">古堡婚紗</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>攝影作品</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="/flight/pn">孕婦攝影</a></li>
+                            <li><a href="/flight/pf">專業形象照</a></li>
+                            <li><a href="/flight/cp">情侶寫真</a></li>
+                            <li><a href="/flight/sg">單身婚紗</a></li>
+                            <li><a href="/flight/pt">寵物婚紗</a></li>
+                            <li><a href="/flight/fam">全家福寫真</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>服務內容</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+
+                            <li><a href="/flight/service">服務流程</a></li>
+                            <li><a href="/flight/price001">婚紗單拍</a></li>
+                            <li><a href="/flight/price004">婚紗包套</a></li>
+                            <li><a href="#">情侶寫真</a></li>
+                            <li><a href="/flight/price002">孕婦寫真</a></li>
+                            <li><a href="#">寶寶寫真</a></li>
+                            <li><a href="/flight/price003">同志寫真｜同性婚紗</a></li>
+                            <li><a href="#">個人寫真｜單身婚紗</a></li>
+                            <li><a href="#">全家福｜週年寫真</a></li>
+
+
+                        </ul>
+                    </li> -->
+                    <!--<li class="dropdown"><a href="#"><span>禮服專區</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">白紗</a></li>
+              <li><a href="wed-dress.html">晚禮服</a></li>
+            </ul>
+          </li>-->
+                    <!-- <li><a href="/flight/at">海外專區</a></li> -->
+                    <!--<li><a href="#">婚禮專欄</a></li>-->
+                    <!--<li><a href="features.html">婚禮表單</a></li>-->
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+        </div>
+    </header>
+    <!-- End Header -->
+    {% block content %} {% endblock %}
+    <!-- ======= Testimonials Section ======= -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-inline-flex">
+                    <div class="col-4 box-005">
+                        <p>
+                            <a href="https://mikan.com.tw/"><img src="{% static 'assets/img/001.png' %}"></a>
+                    </div>
+                    <div class="col-4 box-005">
+                        <p>
+                            <a href="https://www.facebook.com/mikanbaby/?ref=pages_you_manage&locale=zh_TW"><img src="{% static 'assets/img/002.png' %}"></a>
+                    </div>
+                    <div class="col-4 box-005">
+                        <p>
+                            <a href="https://www.facebook.com/mikankids?locale=zh_TW"><img src="{% static 'assets/img/003.png' %}"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-inline-flex">
+                    <div class="col-4 box-005">
+                        <p>
+                            <a href="https://www.facebook.com/VeronaBrideHuang?locale=zh_TW"><img src="{% static 'assets/img/004.png' %}"></a>
+                    </div>
+                    <div class="col-4 box-005">
+                        <p>
+                            <a href="https://www.facebook.com/MikanWedding"><img src="{% static 'assets/img/005.png' %}"></a>
+                    </div>
+                    <div class="col-4 box-005">
+                        <p>
+                            <a href="https://www.facebook.com/shotdogs?locale=zh_TW"><img src="{% static 'assets/img/006.png' %}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>關於我們</h3>
+                    <p style="font-size: 0.7rem;">
+                        橘攝婚紗攝影在創立時，就以區隔化市場策略進入寫真市場經 營，不同於其他同業大同小異之商品風格，獨家以廣告風格MV拍攝手法，迎領流行時尚趨勢的風格。<br><br>獨特的攝影手法與堅強的設計團隊，媒體爭相採訪報導錄製，並提供攝影棚拍攝現場節目，與當紅藝人廣告宣傳之平面攝影。
+                    </p>
+                    <p class="social">
+                        <a href="https://www.facebook.com/MikanWedding"><span class="bi bi-facebook"></span></a>
+                        <a href="#"><span class="bi bi-instagram"></span></a>
+
+                    </p>
+                </div>
+                <div class="col-md-7 ms-auto">
+                    <div class="row site-section pt-0">
+
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <h3>聯絡方式：</h3>
+                            <ul class="list-unstyled">
+                                <li><a style="font-size: 0.7rem;" href="tel:02-2578-8809">電話 : (02)2578-8809</a></li>
+                                <li><a style="font-size: 0.7rem;" href="https://lin.ee/APFT7Ne">Line官網</a></li>
+                                <li><a style="font-size: 0.7rem;" href="https://lin.ee/SCmEXFf">Line網路客</a></li>
+                                <li><img style="width:45% ;" src="{% static 'assets/img/wechat.jpg' %}" alt=""></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-8 mb-8 mb-md-0">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7229.338024257377!2d121.54852417770995!3d25.045304299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abc0e707eae3%3A0x71324825ffa400d1!2z5qmY5pSd5ama57SX5pSd5b2x!5e0!3m2!1szh-TW!2stw!4v1689855599205!5m2!1szh-TW!2stw"
+                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+                <div class="col-md-7">
+                    <p class="copyright">&copy; Copyright. All Rights Reserved</p>
+                    <div class="credits">
+                        Designed by MIKAN
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/vendor/jquery-1.10.2.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/min/plugins.min.js' %}"></script>
+    <script src="{% static 'assets/js/min/main.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-2.6.2.min.js' %}"></script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        $(window).load(function() { // makes sure the whole site is loaded
+            $('#loader').fadeOut(); // will first fade out the loading animation
+            $('#loader-wrapper').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({
+                'overflow-y': 'visible'
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        if ($(window).width()) {
+            $(".v-1").addClass("active");
+        }
+    </script>
+    <script type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var valueNum = window.sessionStorage.userdata;
+            if (valueNum != "1") {
+                $("#myModal").toggle(true);
+                console.log("valueNum");
+            }
+        });
+
+        function cancel() {
+            window.sessionStorage.userdata = "1";
+            $("#close_001").click(function() {
+                $("#myModal").toggle(false)
+            })
+        }
+
+        function show() {
+            window.sessionStorage.userdata = "0";
+            $("#myModal").modal();
+        }
+    </script>
+
+    <!-- Messenger 洽談外掛程式 Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your 洽談外掛程式 code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "214623155216028");
+        chatbox.setAttribute("attribution", "biz_inbox");
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v12.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <style type="text/css">
+        .loading-all {
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+            padding-top: 10%;
+            background-color: #ffffff9e;
+            z-index: 99999000;
+            position: fixed;
+        }
+        
+        #splash {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            /* background: linear-gradient(45deg, #4448b7, #6acefc, #2074b3); */
+            background: #ffffff9e;
+            text-align: center;
+            color: #000;
+            top: 0;
+            left: 0;
+        }
+        
+        #splash_logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #splash_logo img {
+            width: 100%;
+        }
+        
+        .fadeUp {
+            animation-name: fadeUpAnime;
+            animation-duration: 28s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeUpAnime {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+        
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #myModal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999999099;
+        }
+    </style>
+
+</body>
+
+</html>
