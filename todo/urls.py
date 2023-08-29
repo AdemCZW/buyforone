@@ -1,7 +1,6 @@
 from django.urls import path
 from .views import (
     TodoListView,
-
     TodoUpdateView,
     TodoDeleteView,
     TodoDetailView,
@@ -18,8 +17,7 @@ from .views import (
 
 app_name = 'todo'
 urlpatterns = [
-    path('', FlightListView.as_view(), name='list'),
-    path('fg', first_page_view.as_view(), name='fg'),
+    path('', first_page_view.as_view(), name='fg'),
     path('mylist', FlightMyListView.as_view(), name='mylist'),
     path('create', FlightCreateView.as_view(), name='create'),
     path('update/<int:pk>', FlightUpdateView.as_view(), name='update'),
