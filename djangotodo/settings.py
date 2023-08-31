@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 
-    'buyforone-production.up.railway.app', '127.0.0.1', 'manystuffs.com.tw', 'www.manystuffs.com.tw'
+    'buyforone.up.railway.app', '127.0.0.1', 'manystuffs.com.tw', 'www.manystuffs.com.tw'
 
 ]
 
