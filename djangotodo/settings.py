@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 
-    'buyforone.up.railway.app', '127.0.0.1', 'manystuffs.com.tw', 'www.manystuffs.com.tw'
+    'buyforone-production.up.railway.app', '127.0.0.1', 'manystuffs.com.tw', 'www.manystuffs.com.tw'
 
 ]
 
@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'todo.apps.TodoConfig',
     'django_filters',
     'ckeditor',
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
