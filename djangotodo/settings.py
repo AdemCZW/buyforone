@@ -85,12 +85,13 @@ WSGI_APPLICATION = 'djangotodo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '76ElmwVpEApUxDtZFtNL',
-        'HOST': 'containers-us-west-53.railway.app',
-        'PORT': '7620',
+        'DATABASE_PRIVATE_URL': 'postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@postgres.railway.internal:5432/railway',
+        'DATABASE_URL': 'postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@viaduct.proxy.rlwy.net:41935/railway',
+        'PGDATABASE': 'railway',
+        'PGPASSWORD': 'CFBE6dbgd6afFcaa4egGcEEd34fbdEaB',
+        'PGHOST': 'viaduct.proxy.rlwy.net',
+        'PGPORT': '17896',
+        'PGUSER': 'postgres',
     }
 }
 
